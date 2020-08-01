@@ -27,7 +27,7 @@ class Menu extends Component {
               <Link to="/login">Login</Link>
             </li>
             <li>
-              <Link to="/app">App</Link>
+              <Link to="/app/main">App</Link>
             </li>
           </ul>
         </Navbar>

@@ -1,33 +1,38 @@
 import React, { Component } from "react";
-import "./style/index.css";
-import Card from "./content/Card";
-import Container from "./content/Container";
-import Base from "./content/Base";
+import { Router, Redirect, Route, Switch } from "react-router-dom";
+import history from "../../routes/history";
+import Menu from "../../components/Menu";
+import Main from "./components/Main";
 
-class App extends Component {
-  render() {
-    return (
-      <>
-        <Base>
-          <Container>
-            <Card>
-              <img
-                class="card-image"
-                src="https://images.unsplash.com/photo-1504275107627-0c2ba7a43dba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-              />
-            </Card>
+const App = () => (
+  <Router history={history}>
+    <>
+      <Menu />
+      <Switch>
+        <Route exact path="/app" render={() => <Redirect to="/app/main" />} />
+        <Route path="/app/main" component={Main} />
+        {/* <Route path="/app/quotation/:cd" component={QuotationDetails} />
+        <Route path="/app/proposal/:cd" component={ProposalDetails} />
+        <Route path="/app/policy/:cd" component={PolicyDetails} />
+        <Route path="/app/new-quotation" component={NewQuotation} />
+        <Route
+          path="/app/new-custom-quotation"
+          component={NewCustomQuotation}
+        />
+        <Route path="/app/quotation" component={QuotationList} />
+        <Route path="/app/proposal" component={ProposalList} />
+        <Route path="/app/policy" component={PolicyList} />
+        <Route path="/app/policymanager" component={PolicyManager} />
+        <Route path="/app/notifications" component={Notifications} />
+        <Route path="/app/profile/:id" component={ProfileDetails} />
+        <Route path="/app/profile" component={ProfileDetails} />
+        <Route path="/app/edit-profile" component={EditProfile} />
+        <Route path="/app/change-pass" component={ChangePass} />
+        <Route path="/app/insurenceClaim" component={InsuranceClaim} /> */}
+        <Route path="/app/*" component={() => <h1>Not found</h1>} />
+      </Switch>
+    </>
+  </Router>
+);
 
-            <Card>
-              <h3>Pagina Landind !</h3>
-            </Card>
-
-            <Card>
-              <h3>Pagina Landind !</h3>
-            </Card>
-          </Container>
-        </Base>
-      </>
-    );
-  }
-}
 export default App;

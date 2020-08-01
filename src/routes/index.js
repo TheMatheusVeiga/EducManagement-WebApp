@@ -19,7 +19,7 @@ class Routes extends Component {
           <Route exact path="/" render={() => <Redirect to="/landing" />} />
           <Route path="/landing" component={Landing} />
           <Route path="/login" component={Login} />
-          <Route path="/app" component={App} />
+          <Route path="/app/main" component={App} />
         </Switch>
       </BrowserRouter>
     );

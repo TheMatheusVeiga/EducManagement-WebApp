@@ -5,7 +5,7 @@ const Container = Styled.div`
   align-content: center;
   width: 90%;
   height: 40rem;
-  margin: 2% 5% 5% 5%;
+  margin: 5% 5% 5% 5%;
   background-color: white;
   border-radius: 5px;
 `;
