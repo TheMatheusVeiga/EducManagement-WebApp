@@ -1,5 +1,5 @@
 import Styled from "styled-components";
-import img from "../../../assets/background.svg";
+import img from "../../../assets/gradient.svg";
 
 const Base = Styled.div`
   width: 100vw;

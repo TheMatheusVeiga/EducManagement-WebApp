@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import clsx from "clsx";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
@@ -29,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    backgroundColor: "#330033",
+    background: "linear-gradient(90deg, #483c5c, #5c4366, #714a6e, #875174, #9d5978, #b26179, #c56b79, #d67777, #e58474, #f19370, #faa36d, #ffb56b)",
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
@@ -51,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerPaper: {
     width: drawerWidth,
-    backgroundColor: "#330033",
+    backgroundColor: "#483c5c",
     color: "white",
   },
   drawerHeader: {
@@ -113,7 +114,7 @@ export default function PersistentDrawerLeft() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            Persistent drawer
+            Bem vindo, User Profile 01
           </Typography>
         </Toolbar>
       </AppBar>
@@ -127,6 +128,7 @@ export default function PersistentDrawerLeft() {
         }}
       >
         <div className={classes.drawerHeader}>
+
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === "ltr" ? (
               <ChevronLeftIcon style={{ color: "#FFFFFF" }} />
@@ -137,7 +139,7 @@ export default function PersistentDrawerLeft() {
         </div>
         <Divider />
         <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+          {["Tool 1", "Tool 2", "Tool 3", "Tool 4"].map((text, index) => (
             <ListItem button key={text}>
               <ListItemIcon style={{ color: "#FFFFFF" }}>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
@@ -148,13 +150,15 @@ export default function PersistentDrawerLeft() {
         </List>
         <Divider style={{ backgroundColor: "#FFFFFF" }} />
         <List>
-          {["All mail", "Trash", "Spam"].map((text, index) => (
+          {["Tool 5", "Tool 6", "Tool 7"].map((text, index) => (
+            <Link to="/landing">
             <ListItem button key={text}>
               <ListItemIcon style={{ color: "#FFFFFF" }}>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
+            </Link>
           ))}
         </List>
       </Drawer>
