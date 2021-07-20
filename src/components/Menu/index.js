@@ -18,6 +18,7 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 const drawerWidth = 240;
 
@@ -78,6 +79,9 @@ const useStyles = makeStyles((theme) => ({
       duration: theme.transitions.duration.enteringScreen,
     }),
     marginLeft: 0,
+  },
+  simpleAnchor: {
+    textDecoration: "none",
   },
 }));
 
@@ -150,16 +154,26 @@ export default function PersistentDrawerLeft() {
         </List>
         <Divider style={{ backgroundColor: "#FFFFFF" }} />
         <List>
+          {/* PréMap */}
           {["Tool 5", "Tool 6", "Tool 7"].map((text, index) => (
-            <Link to="/landing">
             <ListItem button key={text}>
               <ListItemIcon style={{ color: "#FFFFFF" }}>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
-            </Link>
+           
           ))}
+
+          {/* PósMap ----- LogOff*/}
+          <a style={{textDecoration: "none", color: "inherit"}} href="/landing">
+          <ListItem button>
+              <ListItemIcon style={{ color: "#FFFFFF" }}>
+              <ExitToAppIcon />
+              </ListItemIcon>
+              <ListItemText primary={"Sair"} />
+          </ListItem>
+          </a>
         </List>
       </Drawer>
     </>

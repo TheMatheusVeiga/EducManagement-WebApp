@@ -3,6 +3,8 @@ import { Router, Redirect, Route, Switch } from "react-router-dom";
 import history from "../../routes/history";
 import Menu from "../../components/Menu";
 import Main from "./components/Main";
+import Login from "../Login";
+import Landing from "../Landing";
 
 const App = () => (
   <Router history={history}>
@@ -11,6 +13,10 @@ const App = () => (
       <Switch>
         <Route exact path="/app" render={() => <Redirect to="/app/main" />} />
         <Route path="/app/main" component={Main} />
+        
+        {/* <Route path="/login" component={Login} />
+        <Route path="/landing" component={Landing} /> */}
+
         {/* <Route path="/app/quotation/:cd" component={QuotationDetails} />
         <Route path="/app/proposal/:cd" component={ProposalDetails} />
         <Route path="/app/policy/:cd" component={PolicyDetails} />
