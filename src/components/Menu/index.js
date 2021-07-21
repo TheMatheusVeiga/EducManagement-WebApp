@@ -174,7 +174,7 @@ export default function PersistentDrawerLeft() {
               <ListItemText primary={"Sair"} />
           </ListItem>
           </a>
-        </List>
+        </List>  
       </Drawer>
     </>
   );
