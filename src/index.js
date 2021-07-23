@@ -4,10 +4,13 @@ import ReactDOM from "react-dom";
 import Routes from "./routes";
 import GlobalStyles from "./styles/GlobalStyles";
 import Theme from "./styles/theme";
+
 import { Provider } from "react-redux";
-import store from "./redux/store"
+import generateStore from "./redux/store";
 
 import * as serviceWorker from "./serviceWorker";
+
+const store = generateStore();
 
 ReactDOM.render(
   <>
