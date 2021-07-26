@@ -1,5 +1,5 @@
-import Styled from "styled-components";
-import img from "../../../assets/landing-background.jpg";
+import Styled from 'styled-components';
+import img from '../../../assets/landing-background.jpg';
 
 const Base = Styled.div`
   width: 100vw;

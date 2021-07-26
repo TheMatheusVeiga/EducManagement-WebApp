@@ -1,42 +1,43 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import clsx from "clsx";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import Drawer from "@material-ui/core/Drawer";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import List from "@material-ui/core/List";
-import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
+import React from 'react';
+import { } from 'react-router-dom';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import clsx from 'clsx';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import Drawer from '@material-ui/core/Drawer';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import List from '@material-ui/core/List';
+import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import MailIcon from '@material-ui/icons/Mail';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: "flex",
+    display: 'flex',
   },
   appBar: {
-    transition: theme.transitions.create(["margin", "width"], {
+    transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    background: "linear-gradient(90deg, #483c5c, #5c4366, #714a6e, #875174, #9d5978, #b26179, #c56b79, #d67777, #e58474, #f19370, #faa36d, #ffb56b)",
+    background: 'linear-gradient(90deg, #483c5c, #5c4366, #714a6e, #875174, #9d5978, #b26179, #c56b79, #d67777, #e58474, #f19370, #faa36d, #ffb56b)',
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
     marginLeft: drawerWidth,
-    transition: theme.transitions.create(["margin", "width"], {
+    transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
     }),
@@ -45,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   hide: {
-    display: "none",
+    display: 'none',
   },
   drawer: {
     width: drawerWidth,
@@ -53,35 +54,35 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerPaper: {
     width: drawerWidth,
-    backgroundColor: "#483c5c",
-    color: "white",
+    backgroundColor: '#483c5c',
+    color: 'white',
   },
   drawerHeader: {
-    display: "flex",
-    alignItems: "center",
+    display: 'flex',
+    alignItems: 'center',
     padding: theme.spacing(0, 1),
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
-    justifyContent: "flex-end",
+    justifyContent: 'flex-end',
   },
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
-    transition: theme.transitions.create("margin", {
+    transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
     marginLeft: -drawerWidth,
   },
   contentShift: {
-    transition: theme.transitions.create("margin", {
+    transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
     }),
     marginLeft: 0,
   },
   simpleAnchor: {
-    textDecoration: "none",
+    textDecoration: 'none',
   },
 }));
 
@@ -134,47 +135,47 @@ export default function PersistentDrawerLeft() {
         <div className={classes.drawerHeader}>
 
           <IconButton onClick={handleDrawerClose}>
-            {theme.direction === "ltr" ? (
-              <ChevronLeftIcon style={{ color: "#FFFFFF" }} />
+            {theme.direction === 'ltr' ? (
+              <ChevronLeftIcon style={{ color: '#FFFFFF' }} />
             ) : (
-              <ChevronRightIcon style={{ color: "#FFFFFF" }} />
+              <ChevronRightIcon style={{ color: '#FFFFFF' }} />
             )}
           </IconButton>
         </div>
         <Divider />
         <List>
-          {["Tool 1", "Tool 2", "Tool 3", "Tool 4"].map((text, index) => (
+          {['Tool 1', 'Tool 2', 'Tool 3', 'Tool 4'].map((text, index) => (
             <ListItem button key={text}>
-              <ListItemIcon style={{ color: "#FFFFFF" }}>
+              <ListItemIcon style={{ color: '#FFFFFF' }}>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
           ))}
         </List>
-        <Divider style={{ backgroundColor: "#FFFFFF" }} />
+        <Divider style={{ backgroundColor: '#FFFFFF' }} />
         <List>
           {/* PréMap */}
-          {["Tool 5", "Tool 6", "Tool 7"].map((text, index) => (
+          {['Tool 5', 'Tool 6', 'Tool 7'].map((text, index) => (
             <ListItem button key={text}>
-              <ListItemIcon style={{ color: "#FFFFFF" }}>
+              <ListItemIcon style={{ color: '#FFFFFF' }}>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
-           
+
           ))}
 
-          {/* PósMap ----- LogOff*/}
-          <a style={{textDecoration: "none", color: "inherit"}} href="/landing">
-          <ListItem button>
-              <ListItemIcon style={{ color: "#FFFFFF" }}>
-              <ExitToAppIcon />
+          {/* PósMap ----- LogOff */}
+          <a style={{ textDecoration: 'none', color: 'inherit' }} href="/landing">
+            <ListItem button>
+              <ListItemIcon style={{ color: '#FFFFFF' }}>
+                <ExitToAppIcon />
               </ListItemIcon>
-              <ListItemText primary={"Sair"} />
-          </ListItem>
+              <ListItemText primary="Sair" />
+            </ListItem>
           </a>
-        </List>  
+        </List>
       </Drawer>
     </>
   );

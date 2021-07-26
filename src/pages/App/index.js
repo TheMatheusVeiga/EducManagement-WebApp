@@ -1,23 +1,18 @@
-import React, { Component } from "react";
-import { Router, Redirect, Route, Switch } from "react-router-dom";
-import history from "../../routes/history";
-import Menu from "../../components/Menu";
-import Main from "./components/Main";
-import Login from "../Login";
-import Landing from "../Landing";
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import Menu from '../../components/Menu';
+import Main from './components/Main';
 
 const App = () => (
-  <Router history={history}>
-    <>
-      <Menu />
-      <Switch>
-        <Route exact path="/app" render={() => <Redirect to="/app/main" />} />
-        <Route path="/app/main" component={Main} />
-        
-        {/* <Route path="/login" component={Login} />
+  <>
+    <Menu />
+    <Switch>
+      <Route exact path="/app/main" component={Main} />
+
+      {/* <Route path="/login" component={Login} />
         <Route path="/landing" component={Landing} /> */}
 
-        {/* <Route path="/app/quotation/:cd" component={QuotationDetails} />
+      {/* <Route path="/app/quotation/:cd" component={QuotationDetails} />
         <Route path="/app/proposal/:cd" component={ProposalDetails} />
         <Route path="/app/policy/:cd" component={PolicyDetails} />
         <Route path="/app/new-quotation" component={NewQuotation} />
@@ -35,10 +30,9 @@ const App = () => (
         <Route path="/app/edit-profile" component={EditProfile} />
         <Route path="/app/change-pass" component={ChangePass} />
         <Route path="/app/insurenceClaim" component={InsuranceClaim} /> */}
-        <Route path="/app/*" component={() => <h1>Not found</h1>} />
-      </Switch>
-    </>
-  </Router>
+      <Route path="/app/*" component={() => <h1>Not found</h1>} />
+    </Switch>
+  </>
 );
 
 export default App;
