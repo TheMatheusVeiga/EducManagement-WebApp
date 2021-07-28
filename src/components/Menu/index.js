@@ -32,7 +32,8 @@ const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    background: 'linear-gradient(90deg, #483c5c, #5c4366, #714a6e, #875174, #9d5978, #b26179, #c56b79, #d67777, #e58474, #f19370, #faa36d, #ffb56b)',
+    // background: 'linear-gradient(90deg, #483c5c, #5c4366, #714a6e, #875174, #9d5978, #b26179, #c56b79, #d67777, #e58474, #f19370, #faa36d, #ffb56b)',
+    background: '#fab700',
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
@@ -54,7 +55,8 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerPaper: {
     width: drawerWidth,
-    backgroundColor: '#483c5c',
+    // backgroundColor: '#483c5c',
+    backgroundColor: '#FAB700',
     color: 'white',
   },
   drawerHeader: {

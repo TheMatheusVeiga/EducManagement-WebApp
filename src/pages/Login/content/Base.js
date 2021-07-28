@@ -6,7 +6,7 @@ const Base = Styled.div`
   height: 100vh;
   // background-image: url(${img});
 
-  background-color: #fab700;
+  background-color: #212121;
   background-size: cover;
   position:absolute;
   top:0px;

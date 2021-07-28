@@ -4,7 +4,8 @@ import img from '../../../assets/gradient.svg';
 const Base = Styled.div`
   width: 100vw;
   height: 100vh;
-  background-image: url(${img});
+  // background-image: url(${img});
+  background-color: #212121;
   background-size: cover;
   position:absolute;
   top:0px;
